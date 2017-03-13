@@ -3,7 +3,9 @@
     <title>Home Page</title>
   </div>
   <section id="oneThird">
-    <h1>Bloc Chat</h1>
+    <h1>Bloc Chat
+      <ng-include src="'/templates/modal.html'"></ng-include>
+    </h1>
     <div ng-repeat="room in home.chatRooms">
       <p>{{ room.$value }}</p>
     </div>
