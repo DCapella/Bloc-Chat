@@ -1,15 +1,28 @@
-<section>
-  <div>
-    <title>Home Page</title>
-  </div>
+<section class="container">
   <section>
     <div>
-      <h1>Bloc Chat
-        <button type="button" ng-click="home.openModal()" class="btn-primary">Add Room</button>
-      </h1>
+      <title>Home Page</title>
     </div>
-    <div ng-repeat="room in home.chatRooms">
-      <p>{{ room.$value }}</p>
-    </div>
+    <section class="sideBar">
+      <div>
+        <h1>Bloc Chat
+          <button type="button" ng-click="home.openModal()" class="btn-primary">Add Room</button>
+        </h1>
+      </div>
+      <div ng-repeat="room in home.chatRooms">
+        <a href ng-click="home.currRoom = room.$value; updateId(room.$id)">{{ room.$value }}</a>
+      </div>
+    </section>
+    <section class="content">
+      <div>
+        <h2 class="header">{{ home.currRoom }}</h2>
+        <div ng-repeat="messages in currMessages">
+          <b>{{ messages.username }}</b>
+          <br>
+          {{ messages.content }}
+          <i class="date">{{ messages.sentAt }}</i>
+        </div>
+      </div>
+    </section>
   </section>
 </section>
