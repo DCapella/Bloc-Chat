@@ -1,26 +1,19 @@
 .container {
   position: relative;
-  padding: 0 0 0 55px;
-}
-
-#oneThird {
-  position: absolute;
   padding: 1em;
+}
+
+.sideBar {
+  float: left;
   top: 0; bottom: auto; left: 0;
-  width: 30%;
   background: lightgrey;
+  padding: 1em;
 }
 
-#header { border:1px solid #000; width:100px; height:20px; 
-    margin:0 0 5px 0;
+.content { 
+  margin:5px 0 5px 2em;
+  padding: 1em;
 }
-#content { border:1px solid #000; width:100px; height:50px;
-    margin:5px 0 5px 0;
-}
-#footer { border:1px solid #000; width:100px; height:20px;
-    margin:5px 0 0 0;
-}
-
-.pointer {
-  cursor: pointer;
+.content .date {
+  float: right;
 }
