@@ -12,6 +12,9 @@
       <div ng-repeat="room in home.chatRooms">
         <a href ng-click="home.currRoom = room.$value; updateId(room.$id)">{{ room.$value }}</a>
       </div>
+      <div>
+        <button ng-click="home.changeUsername()">Change Username</button>
+      </div>
     </section>
     <section class="content">
       <div>
@@ -21,6 +24,10 @@
           <br>
           {{ messages.content }}
           <i class="date">{{ messages.sentAt }}</i>
+        </div>
+        <div class="message">
+          <input type="text" ng-model="newMessage" placeholder="Write your message here...">
+          <button ng-click="home.sendMessage(newMessage)">Send</button>
         </div>
       </div>
     </section>

@@ -5,15 +5,26 @@
 
 .sideBar {
   float: left;
-  top: 0; bottom: auto; left: 0;
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: auto;
   background: lightgrey;
   padding: 1em;
+  width: 20%;
 }
 
 .content { 
+  position: fixed;
   margin:5px 0 5px 2em;
   padding: 1em;
+  left: 20%;
 }
 .content .date {
   float: right;
+  left: auto; right: 0;
+  padding-left: 2em;
+}
+.content .message {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
