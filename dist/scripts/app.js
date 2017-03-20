@@ -26,11 +26,16 @@
       url: '/modal',
       controller: 'ModalCtrl as modal',
       templateUrl: '/templates/modal.html'
+    })
+      .state('modalUsername', {
+      url: '/modalUsername',
+      controller: 'ModalUsernameCtrl as modalUsername',
+      templateUrl: '/templates/modalUsername.html'
     });
     
   }
   
   angular
-    .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap'])
+    .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies'])
     .config(config);
 })();

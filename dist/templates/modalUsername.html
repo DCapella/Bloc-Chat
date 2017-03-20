@@ -1,0 +1,24 @@
+<div class="username">
+<!--
+  <button type="button" ng-click="here.openModal('modal-1')">Add Room</button>
+-->
+<!--
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-1">Add Room</button>
+-->
+  <div class="modal" id="modal-username">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Set a username</h4>
+        </div>
+        <div class="modal-body">
+          <p>This name will appear when you send messages</p>
+          <input type="text" ng-model="currentUser" placeholder="Enter name here...">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" ng-click="modalUsername.checkUsername(currentUser)">Set username</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
