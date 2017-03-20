@@ -1,6 +1,6 @@
 (function() {
   function BlocChatCookies($cookies, $uibModal) {
-    $cookies.remove('blocChatCurrentUser');
+    //$cookies.remove('blocChatCurrentUser');
     var currentUser = $cookies.get('blocChatCurrentUser');
     if (!currentUser || currentUser === '') {
       $uibModal.open({
@@ -10,9 +10,9 @@
         controller: 'ModalUsernameCtrl as modalUsername'        
       });
       // Do something to allow users to set their username
-    } else {
-      alert("Your username is " + currentUser);
-    }
+    } //else {
+      //alert("Your username is " + currentUser);
+    //}
   }
   
   angular
